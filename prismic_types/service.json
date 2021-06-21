@@ -1,0 +1,25 @@
+{
+    "Main" : {
+      "icon" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "icon"
+        }
+      },
+      "title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "title"
+        }
+      },
+      "description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "strong,em,hyperlink,list-item",
+          "label" : "description"
+        }
+      }
+    }
+  }

@@ -1,0 +1,20 @@
+{
+    "Main" : {
+      "partners" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "partner_logo" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Partner Logo"
+              }
+            }
+          },
+          "label" : "Partners"
+        }
+      }
+    }
+  }

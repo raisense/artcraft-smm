@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Light"),
+    local("../assets/fonts/GTWalsheimPro-Light"),
+    url("../assets/fonts/GTWalsheimPro-Light.woff") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Regular"),
+    local("../assets/fonts/GTWalsheimPro-Regular"),
+    url("../assets/fonts/GTWalsheimPro-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Thin Oblique"),
+    local("../assets/fonts/GTWalsheimPro-ThinOblique"),
+    url("../assets/fonts/GTWalsheimPro-ThinOblique.woff") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Thin"),
+    local("../assets/fonts/GTWalsheimPro-Thin"),
+    url("../assets/fonts/GTWalsheimPro-Thin.woff") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Bold Oblique"),
+    local("../assets/fonts/GTWalsheimPro-BoldOblique"),
+    url("../assets/fonts/GTWalsheimPro-BoldOblique.woff") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Ultra";
+  src: local("GT Walsheim Pro Ultra Bold"),
+    local("../assets/fonts/GTWalsheimPro-UltraBold"),
+    url("../assets/fonts/GTWalsheimPro-UltraBold.woff") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Ultra";
+  src: local("GT Walsheim Pro Ultra Bold Oblique"),
+    local("../assets/fonts/GTWalsheimPro-UltraBoldOblique"),
+    url("../assets/fonts/GTWalsheimPro-UltraBoldOblique.woff")
+      format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Medium Oblique"),
+    local("../assets/fonts/GTWalsheimPro-MediumOblique"),
+    url("../assets/fonts/GTWalsheimPro-MediumOblique.woff") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Bold"),
+    local("../assets/fonts/GTWalsheimPro-Bold"),
+    url("../assets/fonts/GTWalsheimPro-Bold.woff") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Medium"),
+    local("../assets/fonts/GTWalsheimPro-Medium"),
+    url("../assets/fonts/GTWalsheimPro-Medium.woff") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Regular Oblique"),
+    local("../assets/fonts/GTWalsheimPro-RegularOblique"),
+    url("../assets/fonts/GTWalsheimPro-RegularOblique.woff") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Light Oblique"),
+    local("../assets/fonts/GTWalsheimPro-LightOblique"),
+    url("../assets/fonts/GTWalsheimPro-LightOblique.woff") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Ultra";
+  src: local("GT Walsheim Pro Ultra Light"),
+    local("../assets/fonts/GTWalsheimPro-UltraLight"),
+    url("../assets/fonts/GTWalsheimPro-UltraLight.woff") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Ultra";
+  src: local("GT Walsheim Pro Ultra Light Oblique"),
+    local("../assets/fonts/GTWalsheimPro-UltraLightOblique"),
+    url("../assets/fonts/GTWalsheimPro-UltraLightOblique.woff")
+      format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Black Oblique"),
+    local("../assets/fonts/GTWalsheimPro-BlackOblique"),
+    url("../assets/fonts/GTWalsheimPro-BlackOblique.woff") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Black"),
+    local("../assets/fonts/GTWalsheimPro-Black"),
+    url("../assets/fonts/GTWalsheimPro-Black.woff") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Cond Ultra";
+  src: local("GT Walsheim Pro Condensed Ultra Bold"),
+    local("../assets/fonts/GTWalsheimPro-CondensedUltraBold"),
+    url("../assets/fonts/GTWalsheimPro-CondensedUltraBold.woff")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Light"),
+    local("../assets/fonts/GTWalsheimPro-CondensedLight"),
+    url("../assets/fonts/GTWalsheimPro-CondensedLight.woff") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Bold Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedBoldOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedBoldOblique.woff")
+      format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Light Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedLightOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedLightOblique.woff")
+      format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Thin"),
+    local("../assets/fonts/GTWalsheimPro-CondensedThin"),
+    url("../assets/fonts/GTWalsheimPro-CondensedThin.woff") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "../assets/fonts/GTWalsheimPro-CondensedULightIt";
+  src: local("GT Walsheim Pro Condensed Ultra Light Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedUltraLightOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedUltraLightOblique.woff")
+      format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Cond";
+  src: local("GT Walsheim Pro Condensed Medium"),
+    local("../assets/fonts/GTWalsheimPro-CondensedMedium"),
+    url("../assets/fonts/GTWalsheimPro-CondensedMedium.woff") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Black Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedBlackOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedBlackOblique.woff")
+      format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Regular"),
+    local("../assets/fonts/GTWalsheimPro-CondensedRegular"),
+    url("../assets/fonts/GTWalsheimPro-CondensedRegular.woff")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Thin Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedThinOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedThinOblique.woff")
+      format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Bold"),
+    local("../assets/fonts/GTWalsheimPro-CondensedBold"),
+    url("../assets/fonts/GTWalsheimPro-CondensedBold.woff") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Regular Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedRegularOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedRegularOblique.woff")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "../assets/fonts/GTWalsheimPro-CondensedULight";
+  src: local("GT Walsheim Pro Condensed Ultra Light"),
+    local("../assets/fonts/GTWalsheimPro-CondensedUltraLight"),
+    url("../assets/fonts/GTWalsheimPro-CondensedUltraLight.woff")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Cond Ultra";
+  src: local("GT Walsheim Pro Condensed Ultra Bold Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedUltraBoldOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedUltraBoldOblique.woff")
+      format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Cond";
+  src: local("GT Walsheim Pro Condensed Medium Oblique"),
+    local("../assets/fonts/GTWalsheimPro-CondensedMediumOblique"),
+    url("../assets/fonts/GTWalsheimPro-CondensedMediumOblique.woff")
+      format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Condensed";
+  src: local("GT Walsheim Pro Condensed Black"),
+    local("../assets/fonts/GTWalsheimPro-CondensedBlack"),
+    url("../assets/fonts/GTWalsheimPro-CondensedBlack.woff") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}

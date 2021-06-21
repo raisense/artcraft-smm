@@ -1,0 +1,123 @@
+{
+    "Main" : {
+      "logo" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Logo"
+        }
+      },
+      "intro_text" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em",
+          "label" : "Intro Text"
+        }
+      },
+      "intro_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Intro Image"
+        }
+      },
+      "portfolio_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Portfolio Text"
+        }
+      },
+      "services_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Services Text"
+        }
+      },
+      "price_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Price Text"
+        }
+      },
+      "contact_us_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Contact Us Text"
+        }
+      },
+      "details_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Details Text"
+        }
+      },
+      "contact_package_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Contact Package Text"
+        }
+      },
+      "address_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Address Text"
+        }
+      },
+      "phone_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Phone Text"
+        }
+      },
+      "nav_menu_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Nav Menu Text"
+        }
+      },
+      "contacts_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Contacts Text"
+        }
+      },
+      "socials_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Socials Text"
+        }
+      },
+      "send_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Send Text"
+        }
+      },
+      "your_name_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Your Name Text"
+        }
+      },
+      "your_phone_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Your Phone Text"
+        }
+      },
+      "message_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Message Text"
+        }
+      },
+      "about_project_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "About Project Text"
+        }
+      }
+    }
+  }

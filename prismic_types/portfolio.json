@@ -1,0 +1,44 @@
+{
+    "Main" : {
+      "project_name" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Project Name"
+        }
+      },
+      "main_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 500,
+            "height" : 500
+          },
+          "thumbnails" : [ ],
+          "label" : "Main Image"
+        }
+      },
+      "description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+          "label" : "Description"
+        }
+      },
+      "images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "image"
+              }
+            }
+          },
+          "label" : "Images"
+        }
+      }
+    }
+  }

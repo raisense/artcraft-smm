@@ -1,0 +1,59 @@
+{
+    "Main" : {
+      "address" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Address"
+        }
+      },
+      "address_geo" : {
+        "type" : "GeoPoint",
+        "config" : {
+          "label" : "Address Geo"
+        }
+      },
+      "phone" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Phone"
+        }
+      },
+      "email" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Email"
+        }
+      },
+      "socials" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "icon" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : {
+                  "width" : 100,
+                  "height" : 100
+                },
+                "thumbnails" : [ ],
+                "label" : "Icon"
+              }
+            },
+            "name" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Name"
+              }
+            },
+            "social_link" : {
+              "type" : "Link",
+              "config" : {
+                "label" : "Social Link"
+              }
+            }
+          },
+          "label" : "Socials"
+        }
+      }
+    }
+  }
