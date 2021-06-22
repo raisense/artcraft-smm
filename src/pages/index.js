@@ -53,9 +53,8 @@ const IndexPage = (props) => {
    */
   const filterLang = (a, l) => a.filter((e) => e.lang === l);
   const languages = configsData.map((e) => e.lang);
-  const lang = reactLocalStorage.get("lang", "ru");
-
-  const [locale, setLocale] = useState(lang);
+  const [didMount, setDidMount] = useState(false);
+  const [locale, setLocale] = useState("ru");
   const packagesRef = useRef(null);
   const [packagesPadding, setPackagesPadding] = useState(0);
 
@@ -69,7 +68,11 @@ const IndexPage = (props) => {
   };
 
   useEffect(() => {
-    resize();
+    if (!didMount) {
+      setLocale(reactLocalStorage.get("lang", "ru"));
+      resize();
+      setDidMount(true);
+    }
     window.addEventListener("resize", resize);
     return () => {
       window.removeEventListener("resize", resize);
@@ -87,6 +90,10 @@ const IndexPage = (props) => {
   const config = filterLang(configsData, locale)[0];
   const partners = filterLang(partnersData, locale)[0];
   const contacts = filterLang(contactsData, locale)[0];
+
+  if (!didMount) {
+    return <div />;
+  }
 
   return (
     <div>
