@@ -27,6 +27,7 @@ const ContactsSection = ({ contacts, localization }) => {
                 required
                 type="text"
                 placeholder={`${localization.your_name_text}*`}
+                name="name"
               />
             </Form.Group>
             <Form.Group className="my-2">
@@ -34,10 +35,11 @@ const ContactsSection = ({ contacts, localization }) => {
                 required
                 type="text"
                 placeholder={`${localization.your_phone_text}*`}
+                name="phone"
               />
             </Form.Group>
             <Form.Group className="my-2">
-              <Form.Control type="text" placeholder="E-mail" />
+              <Form.Control type="text" placeholder="E-mail" name="email" />
             </Form.Group>
             <Form.Group className="my-2">
               <Form.Control
@@ -45,6 +47,7 @@ const ContactsSection = ({ contacts, localization }) => {
                 as="textarea"
                 placeholder={`${localization.message_text}*`}
                 rows={8}
+                name="message"
               />
             </Form.Group>
             <input type="hidden" name="bot-field" />
