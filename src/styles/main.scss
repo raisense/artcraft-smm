@@ -63,6 +63,15 @@ a.btn {
   bottom: -9999px;
 }
 
+#background-marks {
+  z-index: -1;
+  position: absolute;
+  top: 200px;
+  height: 200px;
+  background-position: center;
+  width: 100%;
+}
+
 .section-container {
   @extend .d-flex, .flex-column, .align-items-center;
   padding: 20px;

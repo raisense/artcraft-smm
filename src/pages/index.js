@@ -13,6 +13,7 @@ import PartnersSection from "../components/PartnersSection";
 import ContactsSection from "../components/ContactsSection";
 import FooterSection from "../components/FooterSection";
 import mainStripe from "../assets/main-stripe.png";
+import backgroundMarks from "../assets/background-marks.svg";
 
 const IndexPage = (props) => {
   /** @type {Models.PageMisc[]}*/

@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Form, Button, Modal } from "react-bootstrap";
 import { Contacts, PageLocalization } from "../models/AppModels";
 
 /**
@@ -15,7 +15,13 @@ const ContactsSection = ({ contacts, localization }) => {
         <h2 className="h2-header">{localization.contact_us_text}</h2>
         <div className="divider" />
         <div className="contacts-container d-flex flex-column flex-lg-row w-100">
-          <Form className="expanded">
+          <Form
+            className="expanded"
+            method="post"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="contact"
+          >
             <Form.Group className="my-2">
               <Form.Control
                 required
@@ -41,6 +47,8 @@ const ContactsSection = ({ contacts, localization }) => {
                 rows={8}
               />
             </Form.Group>
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <Button type="submit">{localization.send_text}</Button>
           </Form>
           <div className="m-4" />
