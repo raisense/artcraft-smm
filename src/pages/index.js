@@ -70,9 +70,9 @@ const IndexPage = (props) => {
   useEffect(() => {
     if (!didMount) {
       setLocale(reactLocalStorage.get("lang", "ru"));
-      resize();
       setDidMount(true);
     }
+    resize();
     window.addEventListener("resize", resize);
     return () => {
       window.removeEventListener("resize", resize);
