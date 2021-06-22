@@ -12,6 +12,7 @@ import PackagesSection from "../components/PackagesSection";
 import PartnersSection from "../components/PartnersSection";
 import ContactsSection from "../components/ContactsSection";
 import FooterSection from "../components/FooterSection";
+import mainStripe from "../assets/main-stripe.png";
 
 const IndexPage = (props) => {
   /** @type {Models.PageMisc[]}*/
@@ -96,6 +97,9 @@ const IndexPage = (props) => {
         onLocale={changeLang}
       />
       <MainSection config={config} />
+      <div className="zero-height py-3 d-none d-lg-block">
+        <img id="main-stripe" src={mainStripe} />
+      </div>
       <PortfolioSection
         portfolioItems={portfolios}
         localization={config.localization}

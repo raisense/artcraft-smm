@@ -44,7 +44,7 @@ const FooterSection = ({ contacts, config }) => {
             <h5>{config.localization.socials_text}:</h5>
             <div className="my-1" />
             {contacts.socials.map((e) => (
-              <a key={e.link} href={e.link} target="_blank">
+              <a key={e.link} href={e.link} target="_blank" rel="noreferrer">
                 {e.name}
               </a>
             ))}

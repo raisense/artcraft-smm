@@ -59,7 +59,7 @@ const ContactsSection = ({ contacts, localization }) => {
             <div className="my-3" />
             <div className="socials">
               {contacts.socials.map((e) => (
-                <a key={e.link} target="_blank" href={e.link}>
+                <a key={e.link} target="_blank" rel="noreferrer" href={e.link}>
                   <img alt={e.name} src={e.icon.url} />
                 </a>
               ))}
