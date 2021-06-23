@@ -14,6 +14,7 @@ import ContactsSection from "../components/ContactsSection";
 import FooterSection from "../components/FooterSection";
 import mainStripe from "../assets/main-stripe.png";
 import backgroundMarks from "../assets/background-marks.svg";
+import { Helmet } from "react-helmet";
 
 const IndexPage = (props) => {
   /** @type {Models.PageMisc[]}*/
@@ -94,6 +95,9 @@ const IndexPage = (props) => {
 
   return (
     <div>
+      <Helmet>
+        <title>Artcraft SMM</title>
+      </Helmet>
       <NavbarSection
         config={config}
         languages={languages}

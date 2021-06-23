@@ -4,10 +4,19 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "artcraft-smm",
+    title: "Artcraft SMM",
+    description: "Artcraft SMM services",
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/favicon.svg",
+      },
+    },
     {
       resolve: "gatsby-source-prismic",
       options: {
