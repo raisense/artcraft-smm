@@ -18,9 +18,9 @@ const ContactsSection = ({ contacts, localization }) => {
           <Form
             className="expanded"
             method="post"
-            netlify-honeypot="bot-field"
             data-netlify="true"
             name="contact"
+            data-netlify-recaptcha="true"
           >
             <Form.Group className="my-2">
               <Form.Control
@@ -39,7 +39,7 @@ const ContactsSection = ({ contacts, localization }) => {
               />
             </Form.Group>
             <Form.Group className="my-2">
-              <Form.Control type="text" placeholder="E-mail" name="email" />
+              <Form.Control type="email" placeholder="E-mail" name="email" />
             </Form.Group>
             <Form.Group className="my-2">
               <Form.Control
@@ -50,8 +50,7 @@ const ContactsSection = ({ contacts, localization }) => {
                 name="message"
               />
             </Form.Group>
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
+            <div data-netlify-recaptcha="true"></div>
             <Button type="submit">{localization.send_text}</Button>
           </Form>
           <div className="m-4" />
