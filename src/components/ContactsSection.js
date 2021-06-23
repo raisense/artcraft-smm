@@ -9,21 +9,6 @@ import { Contacts, PageLocalization } from "../models/AppModels";
  * @returns
  */
 const ContactsSection = ({ contacts, localization }) => {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch((error) => alert(error));
-  };
-
   return (
     <section id="contacts">
       <Container className="section-container">
@@ -37,7 +22,7 @@ const ContactsSection = ({ contacts, localization }) => {
             netlify
             data-netlify-recaptcha
             action="/thanks/"
-            onSubmit={handleSubmit}
+            encType="application/x-www-form-urlencoded"
           >
             <Form.Group className="my-2">
               <Form.Control
