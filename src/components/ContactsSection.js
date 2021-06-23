@@ -19,11 +19,11 @@ const ContactsSection = ({ contacts, localization }) => {
             className="expanded"
             name="contact"
             method="POST"
-            netlify
-            data-netlify-recaptcha
+            data-netlify="true"
+            data-netlify-recaptcha="true"
             action="/thanks/"
-            encType="application/x-www-form-urlencoded"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <Form.Group className="my-2">
               <Form.Control
                 required
@@ -52,7 +52,7 @@ const ContactsSection = ({ contacts, localization }) => {
                 name="message"
               />
             </Form.Group>
-            <div data-netlify-recaptcha></div>
+            <div data-netlify-recaptcha="true"></div>
             <Button type="submit">{localization.send_text}</Button>
           </Form>
           <div className="m-4" />

@@ -92,10 +92,6 @@ const IndexPage = (props) => {
   const partners = filterLang(partnersData, locale)[0];
   const contacts = filterLang(contactsData, locale)[0];
 
-  if (!didMount) {
-    return <div />;
-  }
-
   return (
     <div>
       <NavbarSection
