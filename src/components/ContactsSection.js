@@ -20,7 +20,7 @@ const ContactsSection = ({ contacts, localization }) => {
             name="contact"
             method="POST"
             netlify
-            data-netlify-recaptcha="true"
+            data-netlify-recaptcha
           >
             <Form.Group className="my-2">
               <Form.Control
