@@ -20,10 +20,11 @@ const ContactsSection = ({ contacts, localization }) => {
             name="contact"
             method="POST"
             data-netlify="true"
-            data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field"
             action="/thanks/"
           >
             <input type="hidden" name="form-name" value="contact" />
+            <input style={{ display: "none" }} name="bot-field" />
             <Form.Group className="my-2">
               <Form.Control
                 required
