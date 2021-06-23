@@ -17,9 +17,9 @@ const ContactsSection = ({ contacts, localization }) => {
         <div className="contacts-container d-flex flex-column flex-lg-row w-100">
           <Form
             className="expanded"
-            method="post"
-            data-netlify="true"
             name="contact"
+            method="POST"
+            netlify
             data-netlify-recaptcha="true"
           >
             <Form.Group className="my-2">
@@ -50,7 +50,7 @@ const ContactsSection = ({ contacts, localization }) => {
                 name="message"
               />
             </Form.Group>
-            <div data-netlify-recaptcha="true"></div>
+            <div data-netlify-recaptcha></div>
             <Button type="submit">{localization.send_text}</Button>
           </Form>
           <div className="m-4" />
