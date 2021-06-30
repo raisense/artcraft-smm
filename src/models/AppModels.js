@@ -226,7 +226,19 @@ class PageMisc {
    * @param {PageLocalization} localization
    * @param {String} lang
    */
-  constructor(logo, introText, introImage, localization, lang) {
+  constructor(
+    logo,
+    title,
+    description,
+    keywords,
+    introText,
+    introImage,
+    localization,
+    lang
+  ) {
+    this.title = title;
+    this.description = description;
+    this.keywords = keywords;
     this.logo = logo;
     this.introText = introText;
     this.introImage = introImage;
@@ -237,6 +249,9 @@ class PageMisc {
   static fromPrismic(data) {
     return new PageMisc(
       PrismicImage.fromPrismic(data.dataRaw.logo),
+      data.dataRaw.title,
+      data.dataRaw.description,
+      data.dataRaw.keywords,
       data.dataRaw.intro_text,
       PrismicImage.fromPrismic(data.dataRaw.intro_image),
       PageLocalization.fromPrismic(data),

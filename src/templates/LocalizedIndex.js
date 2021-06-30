@@ -54,9 +54,22 @@ const LocalizedIndex = ({ pageContext }) => {
 
   return (
     <div>
-      <Helmet>
-        <title>Artcraft SMM</title>
-      </Helmet>
+      <Helmet
+        htmlAttributes={{
+          locale,
+        }}
+        title={config.title}
+        meta={[
+          {
+            name: "description",
+            content: config.description,
+          },
+          {
+            name: "keywords",
+            content: config.keywords,
+          },
+        ]}
+      />
       <NavbarSection
         config={config}
         languages={languages}

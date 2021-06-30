@@ -5,11 +5,19 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Artcraft SMM",
-    description: "Artcraft SMM services",
+    siteUrl: "https://artcraft-smm.netlify.app/",
+    exclue: ["/"],
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-68LT9Z19VX"],
+      },
+    },
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
