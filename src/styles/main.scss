@@ -23,6 +23,14 @@ h2 {
   font-size: 40px;
 }
 
+.btn-close {
+  background-image: url("/close.svg");
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("/menu.svg");
+}
+
 .h2-header {
   @extend h2;
   font-weight: bold;
