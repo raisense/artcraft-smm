@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { graphql } from "gatsby";
 import NavbarSection from "../components/NavBar";
-import * as Models from "../models/AppModels";
 import MainSection from "../components/MainSection";
 import PortfolioSection from "../components/PortfolioSection";
 import ServicesSection from "../components/ServicesSection";
@@ -13,50 +12,19 @@ import PartnersSection from "../components/PartnersSection";
 import ContactsSection from "../components/ContactsSection";
 import FooterSection from "../components/FooterSection";
 import mainStripe from "../assets/main-stripe.png";
-import backgroundMarks from "../assets/background-marks.svg";
 import { Helmet } from "react-helmet";
+import { navigate } from "@reach/router";
 
-const IndexPage = (props) => {
-  /** @type {Models.PageMisc[]}*/
-  const configsData = props.data.allPrismicConfiguration.nodes.map((e) =>
-    Models.PageMisc.fromPrismic(e)
-  );
+const LocalizedIndex = ({ pageContext }) => {
+  const locale = pageContext.locale;
+  const languages = pageContext.languages;
+  const packages = pageContext.packages;
+  const portfolios = pageContext.portfolios;
+  const services = pageContext.services;
+  const config = pageContext.config;
+  const partners = pageContext.partners;
+  const contacts = pageContext.contacts;
 
-  /** @type {Models.Contacts[]}*/
-  const contactsData = props.data.allPrismicContacts.nodes.map((e) =>
-    Models.Contacts.fromPrismic(e)
-  );
-
-  /** @type {Models.PackageItem[]}*/
-  const packagesData = props.data.allPrismicPackage.nodes.map((e) =>
-    Models.PackageItem.fromPrismic(e)
-  );
-
-  /** @type {Models.Partners[]}*/
-  const partnersData = props.data.allPrismicPartners.nodes.map((e) =>
-    Models.Partners.fromPrismic(e)
-  );
-
-  /** @type {Models.PortfolioItem[]}*/
-  const portfoliosData = props.data.allPrismicPortfolio.nodes.map((e) =>
-    Models.PortfolioItem.fromPrismic(e)
-  );
-
-  /** @type {Models.Service[]}*/
-  const servicesData = props.data.allPrismicService.nodes.map((e) =>
-    Models.Service.fromPrismic(e)
-  );
-
-  /**
-   * @template T
-   * @param {T} a
-   * @param {String} l
-   * @returns {T}
-   */
-  const filterLang = (a, l) => a.filter((e) => e.lang === l);
-  const languages = configsData.map((e) => e.lang);
-  const [didMount, setDidMount] = useState(false);
-  const [locale, setLocale] = useState("ru");
   const packagesRef = useRef(null);
   const [packagesPadding, setPackagesPadding] = useState(0);
 
@@ -70,28 +38,19 @@ const IndexPage = (props) => {
   };
 
   useEffect(() => {
-    if (!didMount) {
-      setLocale(reactLocalStorage.get("lang", "ru"));
-      setDidMount(true);
-    }
     resize();
     window.addEventListener("resize", resize);
     return () => {
       window.removeEventListener("resize", resize);
     };
-  });
+  }, []);
 
-  const changeLang = (lang) => {
-    setLocale(lang);
-    reactLocalStorage.set("lang", lang);
+  const onLocale = (l) => {
+    if (l !== locale) {
+      reactLocalStorage.set("lang", l);
+      navigate(`/${l}`);
+    }
   };
-
-  const packages = filterLang(packagesData, locale);
-  const portfolios = filterLang(portfoliosData, locale);
-  const services = filterLang(servicesData, locale);
-  const config = filterLang(configsData, locale)[0];
-  const partners = filterLang(partnersData, locale)[0];
-  const contacts = filterLang(contactsData, locale)[0];
 
   return (
     <div>
@@ -102,7 +61,7 @@ const IndexPage = (props) => {
         config={config}
         languages={languages}
         locale={locale}
-        onLocale={changeLang}
+        onLocale={onLocale}
       />
       <MainSection config={config} />
       <div className="zero-height py-3 d-none d-lg-block">
@@ -126,7 +85,7 @@ const IndexPage = (props) => {
   );
 };
 
-export default IndexPage;
+export default LocalizedIndex;
 export const pageQuery = graphql`
   query prismicData {
     allPrismicConfiguration(

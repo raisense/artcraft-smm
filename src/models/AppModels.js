@@ -270,13 +270,15 @@ class Service {
   }
 }
 
-export default PrismicImage;
-export { PortfolioItem };
-export { PackageItem };
-export { Partners };
-export { Social };
-export { Geo };
-export { Contacts };
-export { PageMisc };
-export { Service };
-export { PageLocalization };
+module.exports = {
+  PrismicImage,
+  PortfolioItem,
+  PackageItem,
+  Partners,
+  Social,
+  Geo,
+  Contacts,
+  PageLocalization,
+  PageMisc,
+  Service,
+};
