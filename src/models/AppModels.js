@@ -43,13 +43,15 @@ class PortfolioItem {
 class PackageItem {
   /**
    *
+   * @param {int} order
    * @param {String} id
    * @param {String} name
    * @param {Array<String>} offerings
    * @param {String} price
    * @param {String} lang
    */
-  constructor(id, name, offerings, price, lang) {
+  constructor(order, id, name, offerings, price, lang) {
+    this.order = order;
     this.id = id;
     this.name = name;
     this.offerings = offerings;
@@ -59,6 +61,7 @@ class PackageItem {
 
   static fromPrismic(data) {
     return new PackageItem(
+      data.order,
       data.id,
       data.dataRaw.package_name,
       data.dataRaw.offers.map((e) => e.offer),

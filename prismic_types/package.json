@@ -1,30 +1,36 @@
 {
-    "Main" : {
-      "package_name" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Package Name"
-        }
-      },
-      "price_field" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "Price Field"
-        }
-      },
-      "offers" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "offer" : {
-              "type" : "Text",
-              "config" : {
-                "label" : "Offer"
-              }
+  "Main": {
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "Order"
+      }
+    },
+    "package_name": {
+      "type": "Text",
+      "config": {
+        "label": "Package Name"
+      }
+    },
+    "price_field": {
+      "type": "Text",
+      "config": {
+        "label": "Price Field"
+      }
+    },
+    "offers": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "offer": {
+            "type": "Text",
+            "config": {
+              "label": "Offer"
             }
-          },
-          "label" : "offers"
-        }
+          }
+        },
+        "label": "offers"
       }
     }
   }
+}

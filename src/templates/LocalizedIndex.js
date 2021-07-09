@@ -14,6 +14,7 @@ import FooterSection from "../components/FooterSection";
 import mainStripe from "../assets/main-stripe.png";
 import { Helmet } from "react-helmet";
 import { navigate } from "@reach/router";
+import "react-multi-carousel/lib/styles.css";
 
 const LocalizedIndex = ({ pageContext }) => {
   const locale = pageContext.locale;

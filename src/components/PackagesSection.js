@@ -1,7 +1,9 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { PackageItem, PageLocalization } from "../models/AppModels";
 import check from "../assets/icons/check.svg";
+import Carousel from "react-multi-carousel";
+import { useEffect } from "react";
 
 /**
  * @param {Object} props
@@ -43,23 +45,39 @@ function Item({ item, localization }) {
  */
 const PackagesSection = forwardRef(
   ({ packages, localization, scrollPadding }, ref) => {
+    const itemWidth = 370;
+    var responsive = {};
+    for (var i = 1; i < 8; i++) {
+      responsive[i] = {
+        breakpoint: {
+          max: 2 * scrollPadding + itemWidth * (i + 1),
+          min: 2 * scrollPadding + itemWidth * i,
+        },
+        items: i,
+      };
+    }
+    packages.sort((a, b) => a.order - b.order);
+
     return (
       <section id="packages">
         <Container ref={ref} className="section-container mb-0">
           <h2 className="h2-header">{localization.price_text}</h2>
           <div className="divider" />
         </Container>
-        <div
-          className="packages-container mx-0"
-          style={{
-            paddingLeft: scrollPadding,
-            paddingRight: scrollPadding,
-          }}
-        >
-          {packages.map((e) => (
-            <Item key={e.id} item={e} localization={localization} />
-          ))}
-        </div>
+        <Container>
+          <Carousel
+            className="my-3"
+            responsive={responsive}
+            ssr={false}
+            swipeable={false}
+            draggable={true}
+            partialVisbile={false}
+          >
+            {packages.map((e) => (
+              <Item key={e.id} item={e} localization={localization} />
+            ))}
+          </Carousel>
+        </Container>
         <div className="section-container mt-0" />
       </section>
     );
