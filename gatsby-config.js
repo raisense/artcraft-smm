@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Artcraft SMM",
-    siteUrl: "https://artcraft-smm.netlify.app/",
+    siteUrl: "https://smm.artcraft.uz/",
     exclue: ["/"],
   },
   plugins: [
